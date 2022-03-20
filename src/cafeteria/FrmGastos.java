@@ -101,7 +101,7 @@ public class FrmGastos extends javax.swing.JFrame {
         jLabel4.setText("Prestamos:");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 100, -1));
 
-        jLabel5.setText("Otros:");
+        jLabel5.setText("Otro:");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, -1, -1));
         jPanel1.add(CajaSm, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 70, -1));
         jPanel1.add(CajaIm, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 140, 70, -1));
@@ -189,7 +189,7 @@ public class FrmGastos extends javax.swing.JFrame {
         jLabel19.setText("Trasporte Publico(Pasaje):");
         jPanel1.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 350, 160, -1));
 
-        jLabel20.setText("Otros:");
+        jLabel20.setText("Otro:");
         jPanel1.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 380, -1, -1));
 
         CajaTrasportePrivado.addActionListener(new java.awt.event.ActionListener() {
