@@ -28,7 +28,7 @@ public class ControladorVentas implements ActionListener{
     public void actionPerformed(ActionEvent e) {
         String leyenda = "";
         if (e.getSource() == frm.btnAgregar) {
-            leyenda = acc.registrarAlta("ventas"," null, ' " +frm.txtNombreProducto.getText()+" ', " +frm.txtPrecio.getText()  );
+            leyenda = acc.registrarAlta("tbventas"," null, ' " +frm.txtNombreProducto.getText()+" ', " +frm.txtPrecio.getText()  );
 
             System.out.println(leyenda);
             System.out.println("hola");
