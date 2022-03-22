@@ -4,17 +4,26 @@
  */
 package cafeteria;
 
+import Controladores.ControladorVentas;
+import Controladores.MenuControl;
+import Vistas.FrmVentas;
+import Vistas.MenuPrincipal;
+import conexion.AccionesMBD;
+
 /**
  *
  * @author DELL
  */
 public class Cafeteria {
 
-    /**
-     * @param args the command line arguments
-     */
+   private FrmVentas _view;
+   
     public static void main(String[] args) {
-        // TODO code application logic here
+       AccionesMBD objMBD = new AccionesMBD();
+       MenuPrincipal menu = new MenuPrincipal();
+       MenuControl Cventa = new MenuControl(menu,objMBD);
+       
+       menu.setVisible(true);
     }
     
 }
