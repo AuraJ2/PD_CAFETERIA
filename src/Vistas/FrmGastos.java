@@ -12,6 +12,9 @@ import static java.util.logging.Level.SEVERE;
 import static java.util.logging.Logger.getLogger;
 import static javax.swing.UIManager.getInstalledLookAndFeels;
 import static javax.swing.UIManager.setLookAndFeel;
+import static java.lang.String.valueOf;
+import static java.util.logging.Logger.getLogger;
+import static javax.swing.UIManager.setLookAndFeel;
 
 /**
  *
@@ -49,7 +52,7 @@ public class FrmGastos extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         CajaTarjeti = new javax.swing.JTextField();
         Caja2 = new javax.swing.JTextField();
-        Total = new javax.swing.JButton();
+        btnTotal = new javax.swing.JButton();
         CajaTotal = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -115,13 +118,13 @@ public class FrmGastos extends javax.swing.JFrame {
             }
         });
 
-        Total.setBackground(new java.awt.Color(255, 102, 102));
-        Total.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
-        Total.setText("TOTAL:");
-        Total.setActionCommand("");
-        Total.addActionListener(new java.awt.event.ActionListener() {
+        btnTotal.setBackground(new java.awt.Color(255, 102, 102));
+        btnTotal.setFont(new java.awt.Font("Tahoma", 3, 11)); // NOI18N
+        btnTotal.setText("TOTAL:");
+        btnTotal.setActionCommand("");
+        btnTotal.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TotalActionPerformed(evt);
+                btnTotalActionPerformed(evt);
             }
         });
 
@@ -322,7 +325,7 @@ public class FrmGastos extends javax.swing.JFrame {
                 .addComponent(Caja6, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(10, 10, 10)
-                .addComponent(Total)
+                .addComponent(btnTotal)
                 .addGap(11, 11, 11)
                 .addComponent(CajaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
@@ -410,7 +413,7 @@ public class FrmGastos extends javax.swing.JFrame {
                     .addComponent(Caja6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Total)
+                    .addComponent(btnTotal)
                     .addComponent(CajaTotal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
         );
 
@@ -434,7 +437,7 @@ public class FrmGastos extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_CajaTarjetiActionPerformed
 
-    private void TotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TotalActionPerformed
+    private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed
           //Variablres Gastos Administrativos
         float SalarioM,ImpuestoM,Prestamos,Otros1,Total;
         //Gastos de Mercadeo
@@ -491,7 +494,7 @@ public class FrmGastos extends javax.swing.JFrame {
     //Mostrara en panatalla el total
     CajaTotal.setText(valueOf(Total));
         
-    }//GEN-LAST:event_TotalActionPerformed
+    }//GEN-LAST:event_btnTotalActionPerformed
 
     private void Caja4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja4ActionPerformed
         // TODO add your handling code here:
@@ -558,10 +561,10 @@ public class FrmGastos extends javax.swing.JFrame {
     private javax.swing.JTextField CajaSm;
     private javax.swing.JTextField CajaTarjeti;
     private javax.swing.JTextField CajaTelefono;
-    private javax.swing.JTextField CajaTotal;
+    public javax.swing.JTextField CajaTotal;
     private javax.swing.JTextField CajaTrasportePrivado;
     private javax.swing.JTextField CajaTrasportePublico;
-    private javax.swing.JButton Total;
+    public javax.swing.JButton btnTotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
