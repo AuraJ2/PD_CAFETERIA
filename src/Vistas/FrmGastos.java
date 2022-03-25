@@ -108,6 +108,12 @@ public class FrmGastos extends javax.swing.JFrame {
 
         jLabel5.setText("Otro:");
 
+        Caja1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Caja1ActionPerformed(evt);
+            }
+        });
+
         jLabel6.setText("Tarjetitas:");
 
         jLabel7.setText("Otro:");
@@ -150,6 +156,12 @@ public class FrmGastos extends javax.swing.JFrame {
         jLabel16.setText("Teléfono:");
 
         jLabel17.setText("Otro:");
+
+        CajaAgua.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CajaAguaActionPerformed(evt);
+            }
+        });
 
         CajaRenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -438,61 +450,7 @@ public class FrmGastos extends javax.swing.JFrame {
     }//GEN-LAST:event_CajaTarjetiActionPerformed
 
     private void btnTotalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTotalActionPerformed
-          //Variablres Gastos Administrativos
-        float SalarioM,ImpuestoM,Prestamos,Otros1,Total;
-        //Gastos de Mercadeo
-        float Tarjetitas,Otros2;
-        //Gastos de Mantenimiento
-        float Pintura,Inmuebles,EquipoComputo,Otros3;
-       //Gastos Fijos
-        float Agua,Gas,Luz,Renta,Telefono,Otros4;
-        //Gastos Variables
-        float TrasportePrivado,TrasportePublico,Otros5;
-        //Gastos Mercancia
-        float Alimentos,Bebidas,Desechables,Otros6;
-
         
-
-        
-        
-        //Parsear Gastos Administrativos
-        SalarioM=parseFloat(CajaSm.getText());
-        ImpuestoM=parseFloat(CajaIm.getText());
-        Prestamos=parseFloat(CajaPrestamos.getText());
-        Otros1=parseFloat(Caja1.getText());
-        //Parsear Gastos de Mercadeo
-         Tarjetitas=parseFloat(CajaTarjeti.getText());
-         Otros2=parseFloat(Caja2.getText());
-         //Parsear Gastos de Manteniminto
-         Pintura=parseFloat(CajaPintura.getText());
-         Inmuebles=parseFloat(CajaInmueble.getText()); 
-         EquipoComputo=parseFloat(CajaEquipo.getText());
-         Otros3=parseFloat(Caja3.getText());
-        //Parsear Gastos Fijos
-         Agua=parseFloat(CajaAgua.getText());
-         Gas=parseFloat(CajaGas.getText());
-         Luz=parseFloat(CajaLuz.getText());
-         Renta=parseFloat(CajaRenta.getText());
-         Telefono=parseFloat(CajaTelefono.getText());
-         Otros4=parseFloat(Caja4.getText());
-         //Parsear Gastos Variables
-         TrasportePrivado=parseFloat(CajaTrasportePrivado.getText());
-         TrasportePublico=parseFloat(CajaTrasportePublico.getText());
-         Otros5=parseFloat(Caja5.getText());
-         //Parsear Gastos Mercancia
-         Alimentos=parseFloat(CajaAlimentos.getText());
-         Bebidas=parseFloat(CajaBebidas.getText());
-         Desechables=parseFloat(CajaDesechable.getText());
-         Otros6=parseFloat(Caja6.getText());
-
-         
-         
-        //Operaciones
-        Total=SalarioM+ImpuestoM+Prestamos+Otros1+Tarjetitas+Otros2+Pintura+Inmuebles+EquipoComputo+Otros3+Agua+Gas+Luz+Renta+Telefono+Otros4+TrasportePrivado+TrasportePublico+Otros5+Alimentos+Bebidas+Desechables+Otros6;
-         
-                
-    //Mostrara en panatalla el total
-    CajaTotal.setText(valueOf(Total));
         
     }//GEN-LAST:event_btnTotalActionPerformed
 
@@ -507,6 +465,14 @@ public class FrmGastos extends javax.swing.JFrame {
     private void CajaRentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CajaRentaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_CajaRentaActionPerformed
+
+    private void Caja1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Caja1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Caja1ActionPerformed
+
+    private void CajaAguaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CajaAguaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_CajaAguaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -540,30 +506,30 @@ public class FrmGastos extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField Caja1;
-    private javax.swing.JTextField Caja2;
-    private javax.swing.JTextField Caja3;
-    private javax.swing.JTextField Caja4;
-    private javax.swing.JTextField Caja5;
-    private javax.swing.JTextField Caja6;
-    private javax.swing.JTextField CajaAgua;
-    private javax.swing.JTextField CajaAlimentos;
-    private javax.swing.JTextField CajaBebidas;
-    private javax.swing.JTextField CajaDesechable;
-    private javax.swing.JTextField CajaEquipo;
-    private javax.swing.JTextField CajaGas;
-    private javax.swing.JTextField CajaIm;
-    private javax.swing.JTextField CajaInmueble;
-    private javax.swing.JTextField CajaLuz;
-    private javax.swing.JTextField CajaPintura;
-    private javax.swing.JTextField CajaPrestamos;
-    private javax.swing.JTextField CajaRenta;
-    private javax.swing.JTextField CajaSm;
-    private javax.swing.JTextField CajaTarjeti;
-    private javax.swing.JTextField CajaTelefono;
+    public javax.swing.JTextField Caja1;
+    public javax.swing.JTextField Caja2;
+    public javax.swing.JTextField Caja3;
+    public javax.swing.JTextField Caja4;
+    public javax.swing.JTextField Caja5;
+    public javax.swing.JTextField Caja6;
+    public javax.swing.JTextField CajaAgua;
+    public javax.swing.JTextField CajaAlimentos;
+    public javax.swing.JTextField CajaBebidas;
+    public javax.swing.JTextField CajaDesechable;
+    public javax.swing.JTextField CajaEquipo;
+    public javax.swing.JTextField CajaGas;
+    public javax.swing.JTextField CajaIm;
+    public javax.swing.JTextField CajaInmueble;
+    public javax.swing.JTextField CajaLuz;
+    public javax.swing.JTextField CajaPintura;
+    public javax.swing.JTextField CajaPrestamos;
+    public javax.swing.JTextField CajaRenta;
+    public javax.swing.JTextField CajaSm;
+    public javax.swing.JTextField CajaTarjeti;
+    public javax.swing.JTextField CajaTelefono;
     public javax.swing.JTextField CajaTotal;
-    private javax.swing.JTextField CajaTrasportePrivado;
-    private javax.swing.JTextField CajaTrasportePublico;
+    public javax.swing.JTextField CajaTrasportePrivado;
+    public javax.swing.JTextField CajaTrasportePublico;
     public javax.swing.JButton btnTotal;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
