@@ -12,12 +12,11 @@
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Controladores/MenuControl.java</file>
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/conexion/AccionesMBD.java</file>
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Controladores/ControladorGastos.java</file>
-            <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Vistas/FrmGastos.java</file>
+            <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Controladores/ControladorLogin.java</file>
+            <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/conexion/Conexion.java</file>
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Vistas/Login.java</file>
-            <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Vistas/FrmVentas.java</file>
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/cafeteria/Cafeteria.java</file>
             <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Controladores/ControladorVentas.java</file>
-            <file>file:/C:/Users/DAEL/Desktop/Cafe/PD_CAFETERIA/src/Vistas/MenuPrincipal.java</file>
         </group>
     </open-files>
 </project-private>
