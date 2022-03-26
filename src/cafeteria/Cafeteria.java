@@ -4,9 +4,11 @@
  */
 package cafeteria;
 
+import Controladores.ControladorLogin;
 import Controladores.ControladorVentas;
 import Controladores.MenuControl;
 import Vistas.FrmVentas;
+import Vistas.Login;
 import Vistas.MenuPrincipal;
 import conexion.AccionesMBD;
 
@@ -20,10 +22,10 @@ public class Cafeteria {
    
     public static void main(String[] args) {
        AccionesMBD objMBD = new AccionesMBD();
-       MenuPrincipal menu = new MenuPrincipal();
-       MenuControl Cventa = new MenuControl(menu,objMBD);
+       Login log = new Login();
+       ControladorLogin cLog =new ControladorLogin(log,objMBD);
        
-       menu.setVisible(true);
+       log.setVisible(true);
     }
     
 }

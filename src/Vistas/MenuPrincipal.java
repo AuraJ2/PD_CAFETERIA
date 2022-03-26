@@ -26,15 +26,15 @@ public class MenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnGastos = new javax.swing.JButton();
+        btnGasto = new javax.swing.JButton();
         btnVentas = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnGastos.setText("Gastos");
-        btnGastos.addActionListener(new java.awt.event.ActionListener() {
+        btnGasto.setText("Gastos");
+        btnGasto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGastosActionPerformed(evt);
+                btnGastoActionPerformed(evt);
             }
         });
 
@@ -45,28 +45,28 @@ public class MenuPrincipal extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(95, 95, 95)
-                .addComponent(btnGastos)
-                .addGap(55, 55, 55)
-                .addComponent(btnVentas)
+                .addGap(220, 220, 220)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnGasto)
+                    .addComponent(btnVentas))
                 .addContainerGap(110, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGastos)
-                    .addComponent(btnVentas))
+                .addGap(45, 45, 45)
+                .addComponent(btnGasto)
+                .addGap(59, 59, 59)
+                .addComponent(btnVentas)
                 .addContainerGap(132, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnGastosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGastosActionPerformed
+    private void btnGastoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGastoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGastosActionPerformed
+    }//GEN-LAST:event_btnGastoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -104,7 +104,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JButton btnGastos;
+    public javax.swing.JButton btnGasto;
     public javax.swing.JButton btnVentas;
     // End of variables declaration//GEN-END:variables
 }
