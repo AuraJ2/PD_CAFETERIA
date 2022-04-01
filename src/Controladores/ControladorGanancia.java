@@ -34,7 +34,7 @@ public class ControladorGanancia implements ActionListener{
     private FrmVentas b;
     private AccionesMBD c;
 
-    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://127.0.0.1:3306/bdcafeteria", "root", "LeeDoHyunM95");
+    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "LeeDoHyunM95");
     Connection con = conexion.ObtenerConexion();
    
 
@@ -51,10 +51,19 @@ public class ControladorGanancia implements ActionListener{
             
         Statement st = con.createStatement();
         ResultSet rs = st.executeQuery(venta);
+        
+       
+        ResultSet sr = st.executeQuery(gasto);
+        
+        
             
         if (rs.next()) {
-            String total = rs.getString("producto");
-            System.out.println(total);
+            int total = rs.getInt("precio");
+            int Gasto = rs.getInt("Totalgastos");
+            int ganancia = total - Gasto;
+           
+            System.out.println(ganancia);
+            
             }
         
         }catch (Exception e){

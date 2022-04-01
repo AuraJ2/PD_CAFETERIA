@@ -4,6 +4,7 @@
  */
 package Controladores;
 
+import Vistas.FrmGanancia;
 import Vistas.FrmGastos;
 import Vistas.FrmVentas;
 import Vistas.MenuPrincipal;
@@ -26,6 +27,7 @@ public class MenuControl implements ActionListener {
         
         this.menu.btnVentas.addActionListener(this);
         this.menu.btnGasto.addActionListener(this);
+        this.menu.btnGanancia.addActionListener(this);
     }
 
    
@@ -51,6 +53,14 @@ public class MenuControl implements ActionListener {
             ventas.setVisible(true);
             
         }
+        
+     if (e.getSource()== menu.btnGanancia) {
+        AccionesMBD obj = new AccionesMBD();
+        FrmGanancia Ganancia = new FrmGanancia();
+        ControladorGanancia Cganancia = new ControladorGanancia (Ganancia, obj);
+        Ganancia.setVisible(true);
+         
+     }   
         
     }
 

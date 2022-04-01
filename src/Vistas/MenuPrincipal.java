@@ -28,6 +28,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnGasto = new javax.swing.JButton();
         btnVentas = new javax.swing.JButton();
+        btnGanancia = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -40,16 +41,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         btnVentas.setText("Ventas");
 
+        btnGanancia.setText("jButton1");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(220, 220, 220)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(btnGasto)
-                    .addComponent(btnVentas))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnGanancia, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(btnGasto)
+                        .addComponent(btnVentas)))
+                .addContainerGap(104, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -58,7 +63,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addComponent(btnGasto)
                 .addGap(59, 59, 59)
                 .addComponent(btnVentas)
-                .addContainerGap(132, Short.MAX_VALUE))
+                .addGap(46, 46, 46)
+                .addComponent(btnGanancia)
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         pack();
@@ -104,6 +111,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnGanancia;
     public javax.swing.JButton btnGasto;
     public javax.swing.JButton btnVentas;
     // End of variables declaration//GEN-END:variables

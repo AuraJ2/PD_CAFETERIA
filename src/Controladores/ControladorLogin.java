@@ -15,7 +15,7 @@ public class ControladorLogin implements ActionListener {
 
     private Login login;
     private AccionesMBD b;
-    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://locallhost:3306/bdcafeteria", "root", "6*8ny3FEtihK");
+    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "LeeDoHyunM95");
     Connection con = conexion.ObtenerConexion();
 
     public void Ingresar() {
@@ -23,22 +23,22 @@ public class ControladorLogin implements ActionListener {
 
         String usuario = String.valueOf(login.txtUsuario.getText());
         String contra = String.valueOf(login.txtContraseña.getText());
-        String SQL = "SELECT * FROM tblogin WHERE Usuario='" + usuario + "' AND pasword='" + contra + "' ";
+        String SQL = "SELECT * FROM tblogin WHERE Usuario='" + usuario + "' AND Contraseña='" + contra + "' ";
 
         try {
             Statement st = con.createStatement();
             ResultSet rs = st.executeQuery(SQL);
 
             if (rs.next()) {
-                resultado = 1;
+               
 
-                if (resultado == 1) {
+                  
                     AccionesMBD objMBD = new AccionesMBD();
                     MenuPrincipal menu = new MenuPrincipal();
                     MenuControl Cventa = new MenuControl(menu, objMBD);
                     
                     menu.setVisible(true);
-                }
+                
 
             } else {
                 JOptionPane.showMessageDialog(null, "Error el usuario o contraseña no son correctos");

@@ -87,7 +87,7 @@ public class ControladorGastos implements ActionListener {
             
             LocalDate dia = LocalDate.now();
 
-            leyenda = b.registrarAlta("tbGastos", " null, ' " + dia + " ', " + a.CajaTotal.getText());
+            leyenda = b.registrarAlta("gastos", " null, ' " + dia + " ', " + a.CajaTotal.getText());
 
             System.out.println(leyenda);
 
