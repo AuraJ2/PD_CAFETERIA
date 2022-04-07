@@ -24,14 +24,13 @@ public class ControladorVentas implements ActionListener{
 
         this.frm.btnAgregar.addActionListener(this);
     }
-
     public void actionPerformed(ActionEvent e) {
         String leyenda = "";
         if (e.getSource() == frm.btnAgregar) {
             leyenda = acc.registrarAlta("tbventas"," null, ' " +frm.txtNombreProducto.getText()+" ', " +frm.txtPrecio.getText()  );
-
             System.out.println(leyenda);
             System.out.println("hola");
+            
         }
     }
 }
