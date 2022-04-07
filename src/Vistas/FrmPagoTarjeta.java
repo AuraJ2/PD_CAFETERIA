@@ -207,17 +207,7 @@ public class FrmPagoTarjeta extends javax.swing.JFrame {
     }//GEN-LAST:event_txtNumeroDeTarjetaActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        String numeroTarjeta , fechaVencimiento , claveSeguridad , pago;
-        
-        numeroTarjeta = txtNumeroDeTarjeta.getText();
-        fechaVencimiento = txtFechaDeVencimiento.getText();
-        claveSeguridad = pswClaveDeSeguridad.getText();
-        pago = cbxPago.getSelectedItem().toString();
-        
-        System.out.println("Numero de la tarjeta perro: " + numeroTarjeta );
-        System.out.println("Fecha de Vencimiento: " + fechaVencimiento);
-        System.out.println("Clave de seguridad: " + claveSeguridad );
-        System.out.println("Pago con tarjeta: " + pago );
+
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     /**
@@ -256,7 +246,7 @@ public class FrmPagoTarjeta extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAceptar;
+    public javax.swing.JButton btnAceptar;
     private javax.swing.JComboBox cbxPago;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -269,8 +259,8 @@ public class FrmPagoTarjeta extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField pswClaveDeSeguridad;
-    private javax.swing.JTextField txtFechaDeVencimiento;
-    private javax.swing.JTextField txtNumeroDeTarjeta;
+    public javax.swing.JPasswordField pswClaveDeSeguridad;
+    public javax.swing.JTextField txtFechaDeVencimiento;
+    public javax.swing.JTextField txtNumeroDeTarjeta;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,8 +5,11 @@
  */
 package Controladores;
 
+import Vistas.FrmGanancia;
 import Vistas.FrmGastos;
 import conexion.AccionesMBD;
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import static java.lang.Float.parseFloat;
@@ -28,7 +31,14 @@ public class ControladorGastos implements ActionListener {
 
         this.a.btnTotal.addActionListener(this);
     }
-
+    
+    public void Centrar(FrmGastos a) {
+        Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+        int x = (int) ((dimension.getWidth() - a.getWidth()) / 2);
+        int y = (int) ((dimension.getHeight() - a.getHeight()) / 2);
+        a.setLocation(x, y);
+        a.setLocation(x, y);
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
 
@@ -79,6 +89,37 @@ public class ControladorGastos implements ActionListener {
             Otros6 = parseFloat(a.Caja6.getText());
 
             //Operaciones
+            if(a.CajaSm.getText() == "" && a.CajaIm.getText() == "" && a.Caja1.getText() == "" && a.CajaTarjeti.getText() == "" && a.Caja2.getText() == "" && a.CajaPintura.getText() == ""
+                    && a.CajaPrestamos.getText() == "" && a.CajaInmueble.getText() == "" && a.CajaEquipo.getText() == "" && a.Caja3.getText() == ""){
+                SalarioM = 0;
+            ImpuestoM = 0;
+            Prestamos = 0;
+            Otros1 = 0;
+            //Parsear Gastos de Mercadeo
+            Tarjetitas = 0;
+            Otros2 = 0;
+            //Parsear Gastos de Manteniminto
+            Pintura = 0;
+            Inmuebles =0;
+            EquipoComputo = 0;
+            Otros3 = 0;
+            //Parsear Gastos Fijos
+            Agua = 0;
+            Gas = 0;
+            Luz = 0;
+            Renta = 0;
+            Telefono = 0;
+            Otros4 = 0;
+            //Parsear Gastos Variables
+            TrasportePrivado = 0;
+            TrasportePublico = 0;
+            Otros5 = 0;
+            //Parsear Gastos Mercancia
+            Alimentos = 0;
+            Bebidas = 0;
+            Desechables = 0;
+            Otros6 = 0;
+            }
             Total = SalarioM + ImpuestoM + Prestamos + Otros1 + Tarjetitas + Otros2 + Pintura + Inmuebles + EquipoComputo + Otros3 + Agua + Gas + Luz + Renta + Telefono + Otros4 + TrasportePrivado + TrasportePublico + Otros5 + Alimentos + Bebidas + Desechables + Otros6;
 
             //Mostrara en panatalla el total
