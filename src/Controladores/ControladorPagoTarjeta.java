@@ -43,8 +43,8 @@ public class ControladorPagoTarjeta implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == p.btnAceptar){
-            limpiar();
             guardarPago();
+            limpiar();
         }
     }
     
