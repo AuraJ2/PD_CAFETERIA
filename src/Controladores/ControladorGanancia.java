@@ -46,7 +46,7 @@ public class ControladorGanancia implements ActionListener {
     private frmConsulta g =  new frmConsulta();
     private AccionesMBD c;
 
-    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "6*8ny3FEtihK");
+    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "pepeteye");
     Connection con = conexion.ObtenerConexion();
 
     ControladorGanancia() {

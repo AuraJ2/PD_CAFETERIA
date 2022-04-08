@@ -15,7 +15,8 @@ public class AccionesMBD {
     protected Conexion conexion;
 
     public AccionesMBD() {
-        conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "6*8ny3FEtihK");
+        //conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://sql5.freesqldatabase.com:3306/sql5480825", "sql5480825", "5fZ3esRtek");
+        Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://locallhost:3306/bdcafeteria", "root", "pepeteye");
     }
 
     public String registrarAlta(String nombreTabla, String consultaSQL) {
