@@ -15,6 +15,7 @@ import java.awt.event.ActionListener;
 import static java.lang.Float.parseFloat;
 import static java.lang.String.valueOf;
 import java.time.LocalDate;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -38,6 +39,32 @@ public class ControladorGastos implements ActionListener {
         int y = (int) ((dimension.getHeight() - a.getHeight()) / 2);
         a.setLocation(x, y);
         a.setLocation(x, y);
+    }
+    public void limpiar(){
+        a.Caja1.setText("");
+        a.Caja2.setText("");
+        a.Caja3.setText("");
+        a.Caja4.setText("");
+        a.Caja5.setText("");
+        a.Caja6.setText("");
+        a.CajaAgua.setText("");
+        a.CajaAlimentos.setText("");
+        a.CajaBebidas.setText("");
+        a.CajaDesechable.setText("");
+        a.CajaEquipo.setText("");
+        a.CajaGas.setText("");
+        a.CajaIm.setText("");
+        a.CajaInmueble.setText("");
+        a.CajaLuz.setText("");
+        a.CajaPintura.setText("");
+        a.CajaPrestamos.setText("");
+        a.CajaRenta.setText("");
+        a.CajaSm.setText("");
+        a.CajaTarjeti.setText("");
+        a.CajaTelefono.setText("");
+        a.CajaTrasportePrivado.setText("");
+        a.CajaTrasportePublico.setText("");
+
     }
     @Override
     public void actionPerformed(ActionEvent e) {
@@ -89,37 +116,7 @@ public class ControladorGastos implements ActionListener {
             Otros6 = parseFloat(a.Caja6.getText());
 
             //Operaciones
-            if(a.CajaSm.getText() == "" && a.CajaIm.getText() == "" && a.Caja1.getText() == "" && a.CajaTarjeti.getText() == "" && a.Caja2.getText() == "" && a.CajaPintura.getText() == ""
-                    && a.CajaPrestamos.getText() == "" && a.CajaInmueble.getText() == "" && a.CajaEquipo.getText() == "" && a.Caja3.getText() == ""){
-                SalarioM = 0;
-            ImpuestoM = 0;
-            Prestamos = 0;
-            Otros1 = 0;
-            //Parsear Gastos de Mercadeo
-            Tarjetitas = 0;
-            Otros2 = 0;
-            //Parsear Gastos de Manteniminto
-            Pintura = 0;
-            Inmuebles =0;
-            EquipoComputo = 0;
-            Otros3 = 0;
-            //Parsear Gastos Fijos
-            Agua = 0;
-            Gas = 0;
-            Luz = 0;
-            Renta = 0;
-            Telefono = 0;
-            Otros4 = 0;
-            //Parsear Gastos Variables
-            TrasportePrivado = 0;
-            TrasportePublico = 0;
-            Otros5 = 0;
-            //Parsear Gastos Mercancia
-            Alimentos = 0;
-            Bebidas = 0;
-            Desechables = 0;
-            Otros6 = 0;
-            }
+          
             Total = SalarioM + ImpuestoM + Prestamos + Otros1 + Tarjetitas + Otros2 + Pintura + Inmuebles + EquipoComputo + Otros3 + Agua + Gas + Luz + Renta + Telefono + Otros4 + TrasportePrivado + TrasportePublico + Otros5 + Alimentos + Bebidas + Desechables + Otros6;
 
             //Mostrara en panatalla el total
@@ -130,8 +127,8 @@ public class ControladorGastos implements ActionListener {
 
             leyenda = b.registrarAlta("gastos", " null, ' " + dia + " ', " + a.CajaTotal.getText());
 
-            System.out.println(leyenda);
-
+            JOptionPane.showMessageDialog(null,leyenda);
+            limpiar();
         }
     }
 

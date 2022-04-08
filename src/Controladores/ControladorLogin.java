@@ -18,7 +18,7 @@ public class ControladorLogin implements ActionListener {
 
     private Login login;
     private AccionesMBD b;
-    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "pepeteye");
+    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "6*8ny3FEtihK");
     Connection con = conexion.ObtenerConexion();
     
     public void Centrar(Login a) {
@@ -66,7 +66,7 @@ public class ControladorLogin implements ActionListener {
         this.b = b;
         this.login.btnIngresar.addActionListener(this);
     }
-
+    
     @Override
     public void actionPerformed(ActionEvent e) {
         String leyenda = "";

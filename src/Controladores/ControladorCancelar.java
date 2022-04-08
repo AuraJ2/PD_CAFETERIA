@@ -17,7 +17,7 @@ public class ControladorCancelar implements ActionListener {
 
     private frmCancelarVenta venta;
     private AccionesMBD b;
-    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "pepeteye");
+    Conexion conexion = new Conexion("com.mysql.cj.jdbc.Driver", "jdbc:mysql://localhost:3306/bdcafeteria", "root", "6*8ny3FEtihK");
     Connection con = conexion.ObtenerConexion();
 
     public ControladorCancelar(frmCancelarVenta venta, AccionesMBD b) {

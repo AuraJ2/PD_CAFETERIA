@@ -11,12 +11,16 @@ import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author DAEL
  */
-public class ControladorVentas implements ActionListener{
+public class ControladorVentas implements ActionListener {
 
     private FrmVentas frm;
     private AccionesMBD acc;
@@ -27,6 +31,7 @@ public class ControladorVentas implements ActionListener{
 
         this.frm.btnAgregar.addActionListener(this);
     }
+
     public void Centrar(FrmVentas a) {
         Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
         int x = (int) ((dimension.getWidth() - a.getWidth()) / 2);
@@ -34,13 +39,24 @@ public class ControladorVentas implements ActionListener{
         a.setLocation(x, y);
         a.setLocation(x, y);
     }
-
+    public void limpiar(){
+        frm.txtNombreProducto.setText("");
+        frm.txtPrecio.setText("");
+    }
     public void actionPerformed(ActionEvent e) {
         String leyenda = "";
+        DefaultTableModel tb = new DefaultTableModel();
+        this.frm.tblVentas.setModel(tb);
+        tb.setColumnIdentifiers(new Object[]{"", "",});
+        Object[]fila=new Object[2];
+        fila[0]=frm.txtNombreProducto.getText();
+        fila[1]=frm.txtPrecio.getText();
         if (e.getSource() == frm.btnAgregar) {
+            tb.addRow(fila);
             leyenda = acc.registrarAlta("ventas", " null, ' " + frm.txtNombreProducto.getText() + " ', " + frm.txtPrecio.getText());
-            System.out.println(leyenda);
-            System.out.println("hola");
+            JOptionPane.showMessageDialog(null,leyenda);
+            frm.Limpiar();
+
         }
     }
 }
