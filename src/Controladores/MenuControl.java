@@ -49,6 +49,7 @@ public class MenuControl implements ActionListener {
             FrmGastos gasto = new FrmGastos();
             ControladorGastos Cgasto = new ControladorGastos(gasto, oMBD);
             Cgasto.Centrar(gasto);
+            menu.setVisible(false);
             gasto.setVisible(true);
 
         }
@@ -57,6 +58,7 @@ public class MenuControl implements ActionListener {
             FrmVentas ventas = new FrmVentas();
             ControladorVentas Cventa = new ControladorVentas(ventas, objMBD);
             Cventa.Centrar(ventas);
+            menu.setVisible(false);
             ventas.setVisible(true);
 
         }
@@ -67,15 +69,15 @@ public class MenuControl implements ActionListener {
             ControladorGanancia Cganancia = new ControladorGanancia(Ganancia, obj);
             Cganancia.Centrar(Ganancia);
             Ganancia.setVisible(true);
-
+            menu.setVisible(false);
         }
 
         if (e.getSource() == menu.btnPagoT) {
             AccionesMBD objMBD = new AccionesMBD();
             FrmPagoTarjeta t = new FrmPagoTarjeta();
-            ControladorPagoTarjeta CTarjeta = new ControladorPagoTarjeta(objMBD,t);
+            ControladorPagoTarjeta CTarjeta = new ControladorPagoTarjeta(objMBD, t);
             CTarjeta.Centrar(t);
-            
+            menu.setVisible(false);
             t.setVisible(true);
         }
 

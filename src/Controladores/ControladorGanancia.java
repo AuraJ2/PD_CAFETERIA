@@ -107,7 +107,11 @@ public class ControladorGanancia implements ActionListener {
             JOptionPane.showMessageDialog(null, "Error " + e.getMessage());
         }
     }
-
+    
+    public void limpiar(){
+        a.txtConsulta.setText("");
+  
+    }
     @Override
 
     public void actionPerformed(ActionEvent e) {
@@ -117,7 +121,7 @@ public class ControladorGanancia implements ActionListener {
         if (e.getSource() == a.btnConsultar) {
             g.setVisible(true);
             consultar();
-            
+            limpiar();
         }
     }
 

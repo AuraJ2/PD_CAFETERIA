@@ -55,6 +55,14 @@ public class FrmVentas extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(102, 0, 0));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
 
+        tblVentas.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
         jScrollPane1.setViewportView(tblVentas);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -261,13 +269,8 @@ public class FrmVentas extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void btnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarActionPerformed
-        DefaultTableModel modelot=(DefaultTableModel)tblVentas.getModel();
-        Object[]fila=new Object[2];
-        fila[0]=txtNombreProducto.getText();
-        fila[1]=txtPrecio.getText();
-        modelot.addRow(fila);
-        tblVentas.setModel(modelot);
-        Limpiar();
+ DefaultTableModel modelot=(DefaultTableModel)tblVentas.getModel();
+       
     }//GEN-LAST:event_btnAgregarActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -324,7 +327,7 @@ public class FrmVentas extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable tblVentas;
+    public javax.swing.JTable tblVentas;
     public javax.swing.JTextField txtNombreProducto;
     public javax.swing.JTextField txtPrecio;
     // End of variables declaration//GEN-END:variables

@@ -35,10 +35,15 @@ public class ControladorPagoTarjeta implements ActionListener{
         
         JOptionPane.showMessageDialog(null,leyenda);
     }
-
+    public void limpiar(){
+        p.txtFechaDeVencimiento.setText("");
+        p.pswClaveDeSeguridad.setText("");
+        p.txtNumeroDeTarjeta.setText("");
+    }
     @Override
     public void actionPerformed(ActionEvent e) {
         if(e.getSource() == p.btnAceptar){
+            limpiar();
             guardarPago();
         }
     }
